@@ -59,38 +59,38 @@ export default function Home() {
     "font-[family-name:var(--font-cormorant)] font-semibold tracking-[-0.045em] text-white";
 
   const fieldClass =
-    "w-full border border-white/10 bg-[#0b0b0b]/80 px-5 py-4 text-[15px] text-white outline-none transition placeholder:text-white/30 focus:border-white/35 focus:bg-[#101010]";
+    "w-full border border-white/14 bg-[#0b0b0b]/85 px-5 py-4 text-[15px] text-white outline-none transition placeholder:text-white/32 focus:border-white/42 focus:bg-[#101010]";
 
   const labelClass =
-    "block text-[10px] font-semibold uppercase tracking-[0.26em] text-white/52";
+    "block text-[10px] font-semibold uppercase tracking-[0.26em] text-white/56";
 
   const accessPoints = [
     {
       kicker: "Flagship Stage",
       title: "Indy 500",
       image: "/cmm-new/images/final-selects/cmm-indy-prestige.jpg",
-      label: "National Brand Stage",
+      label: "Global Prestige Access",
       copy: "National attention, premium hospitality, and executive brand presence around one of the most recognized events in motorsport.",
     },
     {
       kicker: "Value Entry",
       title: "Indy NXT",
       image: "/cmm-new/images/final-selects/cmm-blackgold-sideprofile.jpg",
-      label: "Regional Entry Point",
+      label: "Regional Growth Platform",
       copy: "A strategic lower-cost path into motorsport with regional race access, season-long exposure, and scalable brand involvement.",
     },
     {
       kicker: "Private Market",
       title: "Thermal Club",
       image: "/cmm-new/images/final-selects/miami-paddock-access.jpg",
-      label: "Private Client Access",
+      label: "Private Executive Environment",
       copy: "A private motorsport environment built around exclusivity, high-value relationships, curated hospitality, and client experience.",
     },
     {
       kicker: "Future Expansion",
       title: "IMSA",
       image: "/cmm-new/images/final-selects/miami-blackgold-track.jpg",
-      label: "Future Growth Market",
+      label: "Future Performance Expansion",
       copy: "A developing opportunity in sports car racing, opening future access to luxury automotive, endurance racing, and lifestyle audiences.",
     },
   ];
@@ -151,7 +151,7 @@ export default function Home() {
       <section id="top" className="relative min-h-[100svh] overflow-hidden">
         <video
           ref={heroVideoRef}
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-76"
           src="/cmm-new/videos/cmm-hero-reel.mp4"
           autoPlay
           muted
@@ -162,9 +162,9 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#030303_0%,rgba(3,3,3,0.93)_38%,rgba(3,3,3,0.65)_70%,rgba(3,3,3,0.32)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#030303_0%,rgba(3,3,3,0.04)_40%,#030303_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(255,255,255,0.06),transparent_38%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#030303_0%,rgba(3,3,3,0.91)_38%,rgba(3,3,3,0.62)_70%,rgba(3,3,3,0.28)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#030303_0%,rgba(3,3,3,0.03)_40%,#030303_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(255,255,255,0.065),transparent_38%)]" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-[1600px] flex-col px-6 py-6 md:px-10 lg:px-14">
           <header className="flex items-center justify-between md:opacity-0">
@@ -185,10 +185,11 @@ export default function Home() {
               </p>
 
               <h1
-  className={`${headingClass} max-w-5xl text-[3.25rem] leading-[1.02] md:text-[5.35rem] md:leading-[0.98] lg:text-[6.45rem] xl:text-[6.95rem]`}
->
-  Advertising Beyond Traditional Media.
-</h1>
+                className={`${headingClass} max-w-5xl text-[3.25rem] leading-[1.02] md:text-[5.35rem] md:leading-[0.98] lg:text-[6.45rem] xl:text-[6.95rem]`}
+              >
+                Advertising Beyond Traditional Media.
+              </h1>
+
               <div className="mt-8 h-px w-28" style={goldLine} />
 
               <p className="mt-10 max-w-3xl text-[1.08rem] leading-8 text-white/76 md:text-[1.2rem] md:leading-9">
@@ -577,11 +578,11 @@ export default function Home() {
 
       <section
         id="inquiry"
-        className="relative overflow-hidden border-t border-white/10 bg-[#030303] py-24 md:py-40"
+        className="relative overflow-hidden border-t border-white/10 bg-[#030303] py-28 md:py-44"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_8%,rgba(255,255,255,0.045),transparent_34%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_8%,rgba(255,255,255,0.055),transparent_34%)]" />
 
-        <div className="relative z-10 mx-auto grid max-w-[1600px] gap-12 px-6 md:px-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16 lg:px-14">
+        <div className="relative z-10 mx-auto grid max-w-[1600px] gap-14 px-6 md:px-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16 lg:px-14">
           <div className="lg:pt-8">
             <p className={eyebrowClass} style={goldText}>
               Private Partnership Inquiry
@@ -593,13 +594,13 @@ export default function Home() {
               Begin the partnership conversation.
             </h2>
 
-            <p className="mt-10 max-w-xl text-base leading-8 text-white/60 md:text-lg md:leading-9">
+            <p className="mt-10 max-w-xl text-base leading-8 text-white/64 md:text-lg md:leading-9">
               Tell us who you are, the audience you want to reach, and the type
               of motorsport experience worth building around your brand.
             </p>
 
             <div className="mt-12 max-w-xl border-t border-white/10 pt-8 md:mt-14">
-              <p className="text-sm leading-7 text-white/42">
+              <p className="text-sm leading-7 text-white/46">
                 Every inquiry is reviewed individually. Opportunities are shaped
                 around the brand, the audience, and the level of access needed
                 to make the partnership matter.
@@ -611,13 +612,13 @@ export default function Home() {
             action="mailto:don.cusick@cusickmotorsports.com,billy.morgan@cusickmotorsports.com"
             method="POST"
             encType="text/plain"
-            className="border border-white/12 bg-[#060606]/88 p-6 shadow-[0_0_90px_rgba(0,0,0,0.55)] backdrop-blur-xl md:p-12"
+            className="border border-white/16 bg-[#070707]/92 p-6 shadow-[0_0_90px_rgba(0,0,0,0.58)] backdrop-blur-xl md:p-12"
           >
-            <div className="mb-10 border-b border-white/10 pb-7">
+            <div className="mb-10 border-b border-white/12 pb-7">
               <p className={eyebrowClass} style={goldText}>
                 Inquiry Details
               </p>
-              <p className="mt-3 text-sm leading-6 text-white/38">
+              <p className="mt-3 text-sm leading-6 text-white/42">
                 Prepared for direct review.
               </p>
             </div>
@@ -701,21 +702,21 @@ export default function Home() {
                   name="Message"
                   required
                   rows={5}
-                  className="w-full resize-none border border-white/10 bg-[#0b0b0b]/80 px-5 py-4 text-[15px] leading-7 text-white outline-none transition placeholder:text-white/30 focus:border-white/35 focus:bg-[#101010]"
+                  className="w-full resize-none border border-white/14 bg-[#0b0b0b]/85 px-5 py-4 text-[15px] leading-7 text-white outline-none transition placeholder:text-white/32 focus:border-white/42 focus:bg-[#101010]"
                   placeholder="Share the audience, market, access point, or brand experience you want to build."
                 />
               </label>
             </div>
 
-            <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-md text-xs leading-6 text-white/36">
+            <div className="mt-10 flex flex-col gap-6 border-t border-white/12 pt-8 md:flex-row md:items-center md:justify-between">
+              <p className="max-w-md text-xs leading-6 text-white/42">
                 Your inquiry will be prepared for direct email submission to
                 Cusick Morgan Motorsports.
               </p>
 
               <button
                 type="submit"
-                className="border border-white/16 px-9 py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white/76 transition hover:border-white/40 hover:bg-white hover:text-black"
+                className="border border-white/22 px-9 py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white/80 transition hover:border-white/55 hover:bg-white hover:text-black"
               >
                 Submit Inquiry
               </button>
