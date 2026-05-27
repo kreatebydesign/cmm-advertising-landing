@@ -185,11 +185,10 @@ export default function Home() {
               </p>
 
               <h1
-                className={`${headingClass} max-w-5xl text-[3.55rem] leading-[0.9] md:text-[5.95rem] lg:text-[7rem] xl:text-[7.55rem]`}
-              >
-                Advertising Beyond Traditional Media.
-              </h1>
-
+  className={`${headingClass} max-w-5xl text-[3.25rem] leading-[1.02] md:text-[5.35rem] md:leading-[0.98] lg:text-[6.45rem] xl:text-[6.95rem]`}
+>
+  Advertising Beyond Traditional Media.
+</h1>
               <div className="mt-8 h-px w-28" style={goldLine} />
 
               <p className="mt-10 max-w-3xl text-[1.08rem] leading-8 text-white/76 md:text-[1.2rem] md:leading-9">
