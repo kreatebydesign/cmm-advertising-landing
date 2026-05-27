@@ -22,20 +22,42 @@ export default function Home() {
 
     requestAnimationFrame(raf);
 
-    [heroVideoRef.current, accessVideoRef.current].forEach((video) => {
-      if (video) {
+    const forcePlay = () => {
+      [heroVideoRef.current, accessVideoRef.current].forEach((video) => {
+        if (!video) return;
+
         video.muted = true;
+        video.defaultMuted = true;
         video.playsInline = true;
+        video.autoplay = true;
+        video.loop = true;
+
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "");
+        video.setAttribute("autoplay", "");
+        video.setAttribute("loop", "");
 
         if (video === accessVideoRef.current) {
           video.playbackRate = 0.65;
         }
 
         video.play().catch(() => {});
-      }
-    });
+      });
+    };
 
-    return () => lenis.destroy();
+    forcePlay();
+
+    window.addEventListener("load", forcePlay);
+    document.addEventListener("touchstart", forcePlay, { once: true });
+    document.addEventListener("click", forcePlay, { once: true });
+    document.addEventListener("visibilitychange", forcePlay);
+
+    return () => {
+      lenis.destroy();
+      window.removeEventListener("load", forcePlay);
+      document.removeEventListener("visibilitychange", forcePlay);
+    };
   }, []);
 
   const luxuryGold = "#EACF98";
@@ -159,6 +181,7 @@ export default function Home() {
           playsInline
           controls={false}
           preload="auto"
+          poster="/cmm-new/images/final-selects/cmm-blackgold-sideprofile.jpg"
           aria-hidden="true"
         />
 
@@ -466,6 +489,7 @@ export default function Home() {
               playsInline
               controls={false}
               preload="auto"
+              poster="/cmm-new/images/final-selects/miami-paddock-access.jpg"
               aria-hidden="true"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/18 to-transparent" />
