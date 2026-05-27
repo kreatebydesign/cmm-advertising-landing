@@ -162,18 +162,28 @@ export default function Home() {
       </nav>
 
       <section id="top" className="relative min-h-[100svh] overflow-hidden">
-        <video
-          ref={heroVideoRef}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-76"
-          src="/cmm-new/videos/cmm-hero-reel.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls={false}
-          preload="auto"
-          aria-hidden="true"
-        />
+      <div className="absolute inset-0">
+  <Image
+    src="/cmm-new/images/final-selects/cmm-blackgold-sideprofile.jpg"
+    alt="Cusick Morgan Motorsports"
+    fill
+    priority
+    className="object-cover object-center opacity-82 md:hidden"
+  />
+
+  <video
+    ref={heroVideoRef}
+    className="pointer-events-none hidden h-full w-full object-cover object-center opacity-76 md:block"
+    src="/cmm-new/videos/cmm-hero-reel.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    controls={false}
+    preload="auto"
+    aria-hidden="true"
+  />
+</div>
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#030303_0%,rgba(3,3,3,0.91)_38%,rgba(3,3,3,0.62)_70%,rgba(3,3,3,0.28)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#030303_0%,rgba(3,3,3,0.03)_40%,#030303_100%)]" />
