@@ -22,17 +22,30 @@ export default function Home() {
 
     requestAnimationFrame(raf);
 
-    [heroVideoRef.current, accessVideoRef.current].forEach((video) => {
-      if (video) {
-        video.muted = true;
-        video.playsInline = true;
+    const videos = [heroVideoRef.current, accessVideoRef.current];
 
-        if (video === accessVideoRef.current) {
-          video.playbackRate = 0.65;
-        }
+    videos.forEach((video) => {
+      if (!video) return;
 
-        video.play().catch(() => {});
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      if (video === accessVideoRef.current) {
+        video.playbackRate = 0.65;
       }
+
+      const playVideo = () => {
+        video.play().catch(() => {});
+      };
+
+      playVideo();
+
+      document.addEventListener("touchstart", playVideo, { once: true });
+      document.addEventListener("click", playVideo, { once: true });
     });
 
     return () => lenis.destroy();
@@ -151,7 +164,7 @@ export default function Home() {
       <section id="top" className="relative min-h-[100svh] overflow-hidden">
         <video
           ref={heroVideoRef}
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-76"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-76"
           src="/cmm-new/videos/cmm-hero-reel.mp4"
           autoPlay
           muted
@@ -458,7 +471,7 @@ export default function Home() {
           <div className="relative min-h-[620px] overflow-hidden border border-white/10 bg-black">
             <video
               ref={accessVideoRef}
-              className="absolute inset-0 h-full w-full object-cover object-center opacity-74"
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-74"
               src="/cmm-new/videos/miami-access.mp4"
               autoPlay
               muted
