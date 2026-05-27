@@ -93,7 +93,6 @@ export default function Home() {
       label: "Future Performance Expansion",
       copy: "A developing opportunity in sports car racing, opening future access to luxury automotive, endurance racing, and lifestyle audiences.",
     },
-  ];
 
   const platformPoints = [
     "Executive hospitality",
